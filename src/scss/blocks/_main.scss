@@ -1,0 +1,35 @@
+.main {
+  background: url('/src/img/bg/main.png') center / cover no-repeat;
+  background-clip: border-box;
+  min-height: 800px;
+  color: #FFFFFF;
+  padding: 260px 0 200px;
+
+  .container {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  &__title {
+    font-family: Montserrat;
+    font-weight: 900;
+    font-size: 45px;
+    line-height: 120%;
+    max-width: 592px;
+    margin-bottom: 22px;
+  }
+
+  &__subtitle {
+    max-width: 472px;
+    font-family: Montserrat;
+    font-size: 16px;
+    line-height: 150%;
+    margin-bottom: 71px;
+  }
+
+  &__slider {
+    width: 636px;
+    height: 225px;
+    background: #000;
+  }
+}
