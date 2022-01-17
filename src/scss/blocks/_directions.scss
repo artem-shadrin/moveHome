@@ -1,0 +1,113 @@
+.directions {
+  &__title {
+    margin-left: 120px;
+    margin-bottom: 35px;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__item {
+    height: 560px;
+    width: 440px;
+    max-width: 566px;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 30px;
+    background: rgba(22, 68, 97, .3);
+    overflow: hidden;
+    padding: 0 78px 30px 40px;
+    color: #FFFFFF;
+
+    &:hover {
+      background: none;
+
+      .directions__img {
+        filter: none;
+      }
+    }
+  }
+
+  &__img {
+    filter: grayscale(70%) blur(2px);
+    transition: all .2s ease-in;
+    display: block;
+    position: absolute;
+    max-width: none;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    object-fit: cover;
+  }
+
+  &__numb {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 130%;
+    /* or 18px */
+
+    text-transform: uppercase;
+
+
+
+    opacity: 0.5;
+    margin-bottom: 6px;
+  }
+
+  &__name {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 130%;
+    text-align: left;
+
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  &__discription {
+    margin-bottom: 30px;
+    font-size: 14px;
+    line-height: 140%;
+  }
+
+  .arrow {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    border: none;
+    position: relative;
+    margin-right: 15px;
+
+    &::after {
+      content: url('../icons/arrow.svg');
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-40%, -44%);
+      background: none;
+
+    }
+  }
+
+  &__link {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 40px;
+    text-decoration: none;
+    display: flex;
+
+    &:hover span {
+      text-decoration: underline;
+    }
+  }
+}
