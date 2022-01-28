@@ -1,6 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&display=swap');
 
 @import './base/variables';
+@import './libs/fonts';
 
 *,
 *::after,
@@ -22,6 +23,9 @@ body {
   margin: 0;
   padding: 0;
   font-family: Montserrat;
+  background-color: $grey-color;
+  margin: 0 auto;
+  ;
 }
 
 p,
@@ -38,9 +42,18 @@ img {
   max-width: 100%;
 }
 
+.active {
+  display: block;
+}
+
 .container {
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
+
+  &--wide {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
 }
 
 
@@ -92,9 +105,16 @@ img {
   }
 }
 
+@import './blocks/header';
 @import './blocks/main';
 @import './blocks/features';
 @import './blocks/delivery';
 @import './blocks/services';
 @import './blocks/directions';
 @import './blocks/advantages';
+@import './blocks/transportation';
+@import './blocks/feedback';
+@import './blocks/support';
+@import './blocks/faq';
+@import './blocks/calc';
+@import './blocks/footer';

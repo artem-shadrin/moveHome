@@ -1,0 +1,119 @@
+.calc {
+  background: url("../img/bg/calc__bg.png") no-repeat;
+  background-size: cover;
+
+  .container {
+    display: flex;
+    background: #fff;
+    position: relative;
+    transform: translateY(-195px);
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 0px 4px 4px 0px;
+
+    &>* {
+      flex: 1
+    }
+  }
+
+  &__title {
+    margin-bottom: 25px;
+  }
+
+  &__content {
+    padding: 35px 40px 40px;
+  }
+
+  &__form {
+    display: grid;
+    gap: 10px 20px;
+    grid-template-areas:
+      "name surname"
+      "from to"
+      "weight size"
+      "email tel"
+      "descr descr"
+      "politics politics"
+      "btn btn";
+
+    textarea,
+    input {
+      background: #F6F6F6;
+      border-radius: 4px;
+      padding: 13px 15px;
+      border: none;
+      resize: none;
+
+      &::-webkit-input-placeholder {
+        font-family: "Montserrat";
+        font-size: 14px;
+        line-height: 140%;
+        /* identical to box height, or 20px */
+
+
+        color: #252525;
+
+        opacity: 0.6;
+
+      }
+
+
+    }
+  }
+
+  &__descr {
+    grid-area: descr;
+  }
+
+  &__name {
+    grid-area: name;
+  }
+
+  &__surname {
+    grid-area: surname;
+  }
+
+  &__from {
+    grid-area: from;
+  }
+
+  &__to {
+    grid-area: to;
+  }
+
+  &__weight {
+    grid-area: weight;
+  }
+
+  &__size {
+    grid-area: size;
+  }
+
+  &__email {
+    grid-area: email;
+  }
+
+  &__tel {
+    grid-area: tel;
+  }
+
+  &__politics {
+    grid-area: politics;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 170%;
+    /* or 20px */
+
+
+    color: #252525;
+
+    opacity: 0.7;
+  }
+
+  &__btn {
+    grid-area: btn;
+    max-width: 286px;
+
+  }
+}

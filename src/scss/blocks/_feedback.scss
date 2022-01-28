@@ -1,0 +1,157 @@
+.feedback {
+  padding: 100px 70px;
+
+  &__top {
+    margin: 0 50px 30px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__title {
+    margin-right: auto;
+  }
+
+
+
+  &__link {
+    text-decoration: none;
+
+    &:first-of-type {
+      background: none;
+      border: 1px $blue-color solid;
+      border-radius: 4px;
+      color: $blue-color;
+      margin-right: 10px;
+    }
+  }
+
+  &__slider {
+    position: relative;
+  }
+
+  &__navigation {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: -50px;
+    right: -50px;
+    transform: translateY(-50%);
+  }
+
+  &__prev,
+  &__next {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    border: 1px solid #3374F5;
+    background-color: #FFFFFF;
+    position: relative;
+
+    &::after {
+      content: url('../icons/arrow.svg');
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: rotateY(-180deg) translate(80%, -40%);
+
+    }
+
+
+  }
+
+  &__next {
+    margin-left: auto;
+
+    &::after {
+      transform: translate(-30%, -40%);
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+
+  &__slide {
+    padding: 30px;
+    max-width: 595px;
+    color: #252525;
+    background: #FFFFFF;
+    border-radius: 4px;
+    position: relative;
+
+    &+& {
+      margin-left: 10px;
+    }
+  }
+
+  &__name {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 140%;
+    margin-bottom: 10px;
+  }
+
+  &__topic {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 150%;
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 150%;
+  }
+
+  &__way {
+    position: absolute;
+    top: 33px;
+    right: 30px;
+  }
+
+  &__point {
+    display: inline-block;
+    font-size: 12px;
+    line-height: 150%;
+
+    &::before {
+      content: url('../icons/geo.svg');
+      width: 14px;
+      height: 14px;
+      margin-right: 4px;
+    }
+
+    &:first-of-type {
+      &::after {
+        content: url('../icons/way.svg');
+        margin: 0 10px;
+
+      }
+    }
+  }
+
+  &__dots {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__dot {
+    background: #CECECE;
+    border: none;
+    border-radius: 100%;
+    width: 6px;
+    height: 6px;
+
+    &+& {
+      margin-left: 10px;
+    }
+
+    &.active {
+      background: $blue-color;
+
+    }
+  }
+}

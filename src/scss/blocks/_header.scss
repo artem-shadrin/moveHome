@@ -1,0 +1,90 @@
+.header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  color: $white-color;
+  font-family: Montserrat;
+
+  &__top {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    padding: 9px 0;
+    color: $white-color;
+
+    .container {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+
+    .social {
+      display: flex;
+      align-items: flex-start;
+      margin-right: 25px;
+
+      &>*+* {
+        margin-left: 10px;
+      }
+    }
+
+    .contacts {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      a {
+        text-decoration: none;
+      }
+
+      &__mail {
+        margin-right: 20px;
+      }
+    }
+  }
+
+  .nav {
+    border-bottom: 1px solid rgba($white-color, .3);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 130%;
+    /* or 18px */
+
+    text-align: center;
+
+    &__list {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0;
+      margin: -1px;
+    }
+
+    &__logo {
+      width: 73px;
+      list-style: none;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    &__item {
+      display: inline-block;
+      border-bottom: 2px solid transparent;
+      color: rgba($white-color, .3);
+      transition: all 0.2s ease-out;
+
+      &:hover {
+        border-bottom: 2px solid #FFFFFF;
+        color: $white-color;
+        font-weight: 600;
+      }
+    }
+
+    &__link {
+      display: block;
+      padding: 30px 1px;
+      text-decoration: none;
+    }
+  }
+}
